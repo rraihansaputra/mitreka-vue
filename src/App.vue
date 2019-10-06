@@ -6,18 +6,23 @@
         <span class="font-weight-light">MATERIAL DESIGN</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
+      <router-link to="/home">
       <v-btn
         text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
       >
-        <span class="mr-2">Latest Release</span>
+        <span class="mr-2">Home</span>
       </v-btn>
+      </router-link>
+      <router-link to="/about">
+      <v-btn
+        text
+      >
+        <span class="mr-2">About</span>
+      </v-btn>
+      </router-link>
     </v-app-bar>
 
-    <v-content>
-      <HelloWorld/>
-    </v-content>
+    <router-view></router-view>
   </v-app>
 </template>
 
