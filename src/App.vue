@@ -22,7 +22,12 @@
       </router-link>
     </v-app-bar>
 
-    <router-view></router-view>
+    <v-content>
+      <v-container fluid>
+        <router-view></router-view>
+      </v-container>
+    </v-content>
+
   </v-app>
 </template>
 
