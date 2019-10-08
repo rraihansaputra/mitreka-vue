@@ -21,6 +21,10 @@
       </v-btn>
       </router-link>
     </v-app-bar>
+    <span class="mr-2">Penawaran</span>
+      </v-btn>
+      </router-link to="/Penawaran">
+    </v-app-bar>
 
     <v-content>
       <v-container fluid>
