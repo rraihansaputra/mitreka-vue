@@ -6,6 +6,10 @@ import Kanan from "./components/Kanan.vue";
 import Penawaran from "./components/Penawaran.vue";
 import Kiri from "./components/Kiri.vue";
 import Scoreboard from "./views/Scoreboard.vue";
+import TabInterface from "./views/TabInterface.vue";
+import TabInterfaceManual from "./views/TabInterfaceManual.vue";
+import MultiView from "./views/MultiView.vue";
+import MultiViewAPI from "./views/MultiViewAPI.vue";
 
 Vue.use(Router);
 
@@ -32,5 +36,9 @@ export default new Router({
     {path: "/Penawaran", name: "penawaran", component: Penawaran},
     {path: "/kiri", name: "kiri", component: Kiri},
     {path: "/scoreboard", name:"scoreboard", component:  Scoreboard},
+    {path: "/tabs", name:"tabs", component: TabInterface},
+    {path: "/tabsm", name: "tabm", component: TabInterfaceManual},
+    {path: "/multiview", name: "multiview", component: MultiView},
+    {path: "/multiviewAPI", name:"multiviewAPI", component: MultiViewAPI},
   ]
 });

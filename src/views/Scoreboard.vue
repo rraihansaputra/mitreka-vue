@@ -9,6 +9,7 @@
             <v-row>
                 <v-col class="d-flex justify-center">
                 <h1>Combined Score: {{game["playerOne"] + game["playerTwo"]}}</h1>
+                <h1>Combined Score: {{combinedScore}}</h1>
                 </v-col>
             </v-row>
             <v-row>
@@ -20,17 +21,25 @@
                 </v-col>
             </v-row>
         </v-card>
-        <v-row><v-col>
-            <ScoreDisplay :game="game"/>
-        </v-col></v-row>
+
         <v-row>
             <v-col>
                 <h1>Player 1</h1>
-                <Player @updateGame="updateGame" @updateStatus="updateStatus" num="playerOne"/></v-col>
+                <Player 
+                    v-on:updateStatus2="updateStatus" 
+                    num="playerOne"
+                    v-on:updateGame="updateGame"/>
+
+            </v-col>
             <v-col>
                 <h1>Player 2</h1>
-                <Player @updateGame="updateGame" @updateStatus="updateStatus" num="playerTwo"/></v-col>
+                <Player 
+                    @updateStatus2="updateStatus"
+                    num="playerTwo"
+                    v-on:updateGame="updateGame"/>
+            </v-col>
         </v-row>
+
     </v-container>
 </template>
 <script>
@@ -49,8 +58,13 @@ export default {
             },
             status: {
                 playerOne: "",
-                playerTwo: "",
+                playerTwo: ""
             }
+        }
+    },
+    computed: {
+        combinedScore() {
+            return this.game.playerOne + this.game.playerTwo
         }
     },
     methods: {
@@ -61,6 +75,7 @@ export default {
         updateStatus(player_num, status){
             this.status[player_num] = status
         },
-    }
+    },
+
 }
 </script>

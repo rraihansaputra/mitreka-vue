@@ -6,24 +6,27 @@
         <span class="font-weight-light">MATERIAL DESIGN</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <router-link to="/home">
+      <router-link to="/tabsm">
       <v-btn
         text
       >
-        <span class="mr-2">Home</span>
+        <span class="mr-2">Tab Contact</span>
       </v-btn>
       </router-link>
-      <router-link to="/about">
+      <router-link to="/multiview">
       <v-btn
         text
       >
-        <span class="mr-2">About</span>
+        <span class="mr-2">MultiView</span>
       </v-btn>
       </router-link>
-    </v-app-bar>
-    <span class="mr-2">Penawaran</span>
+      <router-link to="/multiviewapi">
+      <v-btn
+        text
+      >
+        <span class="mr-2">MultiView API</span>
       </v-btn>
-      </router-link to="/Penawaran">
+      </router-link>
     </v-app-bar>
 
     <v-content>

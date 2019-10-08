@@ -15,7 +15,10 @@
           <v-container>
             <v-row>
               <v-col>
-                <v-tabs>
+                <v-tabs
+                  background-color="deep-purple accent-4"
+                  class="elevation-2"
+                >
                   <v-tabs-slider></v-tabs-slider>
                   <v-tab href="#nestedtab-1">Main Tab</v-tab>
                   <v-tab href="#nestedtab-2">Secondary Tab</v-tab>
