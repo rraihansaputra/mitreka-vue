@@ -4,7 +4,7 @@
       <v-container>
         <v-row>
           <v-col>
-            <h1>Kiri</h1>
+              <h2> {{title}} </h2> 
           </v-col>
           <v-col class="d-flex justify-end">
             <v-btn class="ma-2">Button1</v-btn>
@@ -14,20 +14,18 @@
       </v-container>
     </v-card>
     <v-card>
-      <v-card-text>wazzaps</v-card-text>
+      <v-card-text>{{text}}</v-card-text>
     </v-card>
   </v-card>
 </template>
 <script>
 export default {
-    components: {
+  props :['title','text'],
+  components: {
     //PageTitleTest
   },
   data() {
     return {
-      tab: null,
-      text: 'ayamgeprekesdm',
-      tabs: 3,
     }
   }
 }

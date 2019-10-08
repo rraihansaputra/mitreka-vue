@@ -5,6 +5,7 @@ import ContactDetail from "./views/ContactDetail.vue";
 import Kanan from "./components/Kanan.vue";
 import Penawaran from "./components/Penawaran.vue";
 import Kiri from "./components/Kiri.vue";
+import Scoreboard from "./views/Scoreboard.vue";
 
 Vue.use(Router);
 
@@ -30,5 +31,6 @@ export default new Router({
     {path: "/kanan", name: "kanan", component: Kanan},
     {path: "/Penawaran", name: "penawaran", component: Penawaran},
     {path: "/kiri", name: "kiri", component: Kiri},
+    {path: "/scoreboard", name:"scoreboard", component:  Scoreboard},
   ]
 });
